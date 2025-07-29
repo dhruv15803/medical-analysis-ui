@@ -1,4 +1,3 @@
-import React from "react";
 import { TbHeartRateMonitor } from "react-icons/tb";
 
 type Props = {

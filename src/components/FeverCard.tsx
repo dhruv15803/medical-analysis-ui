@@ -1,5 +1,4 @@
 import { HeartIcon } from "lucide-react";
-import React from "react";
 
 type Props = {
   feverFahrenheit: number;
