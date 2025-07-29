@@ -1,0 +1,15 @@
+export const PATIENT_NAME = "AR Shakir";
+export const HEARTRATE_SYSTOLIC_PRESSURE = 120;
+export const HEARTRATE_DiASTOLICPRESSURE = 70;
+export const FEVER_FAHRENHEIT = 98;
+export const LOWER_BLOOD_PRESSURE = 70;
+export const UPPER_BLOOD_PRESSURE = 120;
+export const PATIENT_DUE_BILL = 9358.2;
+export const LATEST_FEVER_VALUE = 98;
+export const AVERAGE_BPM = 72;
+export const UPPER_BLOOD_PRESSURE_BOTTOM = 120;
+export const LOWER_BLOOD_PRESSURE_BOTTOM = 70;
+export const HEARTRATE_BOTTOM_CARD = 85;
+export const GLUCOSE_LEVEL_LOWER = 75;
+export const GLUCOSE_LEVEL_UPPER = 90;
+export const BLOOD_COUNT_IN_ML = 9456;
