@@ -43,7 +43,7 @@ const Patient = ({ patientName }: Props) => {
           </Button>
         </div>
 
-        <div className="flex items-center gap-8 min-h-[30%]">
+        <div className="flex items-center gap-8">
           <HeartRateCard
             systolicPressure={HEARTRATE_SYSTOLIC_PRESSURE}
             diastolicPressure={HEARTRATE_DiASTOLICPRESSURE}
