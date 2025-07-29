@@ -43,7 +43,7 @@ const Patient = ({ patientName }: Props) => {
           </Button>
         </div>
 
-        <div className="flex items-center justify-between min-h-[30%]">
+        <div className="flex items-center gap-8 min-h-[30%]">
           <HeartRateCard
             systolicPressure={HEARTRATE_SYSTOLIC_PRESSURE}
             diastolicPressure={HEARTRATE_DiASTOLICPRESSURE}
@@ -59,9 +59,7 @@ const Patient = ({ patientName }: Props) => {
           <FeverHistoryCard latestFeverValue={LATEST_FEVER_VALUE} />
         </div>
 
-        <div className="h-full">
-          <EcgChartComponent averageBpm={AVERAGE_BPM} />
-        </div>
+        <EcgChartComponent averageBpm={AVERAGE_BPM} />
 
         <div className="grid grid-cols-4 gap-2 p-4">
           <BloodPressureBottomCard
