@@ -40,7 +40,7 @@ const FeverCard = ({ feverFahrenheit }: Props) => {
           <span className="text-md">°F</span>
         </div>
 
-        <div>
+        <div className="w-full h-full">
           <Line
             data={{
               datasets: [

@@ -43,7 +43,7 @@ const HeartRateCard = ({ diastolicPressure, systolicPressure }: Props) => {
           </span>
         </div>
 
-        <div>
+        <div className="w-full h-full">
           <Line
             data={{
               datasets: [
