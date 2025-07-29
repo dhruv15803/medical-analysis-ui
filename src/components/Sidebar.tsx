@@ -63,7 +63,7 @@ const Sidebar = () => {
   return (
     <>
       <div className="flex flex-col w-[20%] h-screen p-4 border-r-2 bg-purple-50">
-        <header className="flex items-center justify-center gap-2">
+        <header className="flex items-center justify-start gap-2">
           <Triangle className="text-purple-800 " />
           <h1 className="text-xl font-semibold text-purple-800">Dr. Bliss</h1>
         </header>

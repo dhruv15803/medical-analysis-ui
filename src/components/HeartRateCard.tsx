@@ -1,9 +1,32 @@
 import { HeartIcon } from "lucide-react";
+import { Chart, CategoryScale, LinearScale } from "chart.js";
+import { Line } from "react-chartjs-2";
 
 type Props = {
   systolicPressure: number;
   diastolicPressure: number;
 };
+
+Chart.register(CategoryScale, LinearScale);
+
+const heartRateBpmData: { x: number; y: number }[] = [
+  {
+    x: 0,
+    y: 150,
+  },
+  {
+    x: 10,
+    y: 130,
+  },
+  {
+    x: 40,
+    y: 130,
+  },
+  {
+    x: 50,
+    y: 150,
+  },
+];
 
 const HeartRateCard = ({ diastolicPressure, systolicPressure }: Props) => {
   return (
@@ -20,7 +43,51 @@ const HeartRateCard = ({ diastolicPressure, systolicPressure }: Props) => {
           </span>
         </div>
 
-        <div>graph area</div>
+        <div>
+          <Line
+            data={{
+              datasets: [
+                {
+                  data: heartRateBpmData,
+                  borderColor: "white",
+                  borderWidth: 2,
+                  fill: false,
+                  pointBackgroundColor: "white",
+                },
+              ],
+            }}
+            options={{
+              scales: {
+                x: {
+                  type: "linear",
+                  title: {
+                    display: true,
+                    text: "Time (s)",
+                    color: "white",
+                  },
+                  ticks: {
+                    color: "white",
+                  },
+                },
+                y: {
+                  title: {
+                    display: true,
+                    text: "Bpm",
+                    color: "white",
+                  },
+                  ticks: {
+                    color: "white", // 👈 Y-axis labels color
+                  },
+                },
+              },
+              plugins: {
+                legend: {
+                  display: false,
+                },
+              },
+            }}
+          />
+        </div>
       </div>
     </>
   );

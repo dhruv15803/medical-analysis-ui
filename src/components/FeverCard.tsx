@@ -1,8 +1,30 @@
 import { HeartIcon } from "lucide-react";
+import { Chart, CategoryScale, LinearScale } from "chart.js";
+import { Line } from "react-chartjs-2";
 
+Chart.register(CategoryScale, LinearScale);
 type Props = {
   feverFahrenheit: number;
 };
+
+const feverCardData: { x: number; y: number }[] = [
+  {
+    x: 10,
+    y: 110,
+  },
+  {
+    x: 30,
+    y: 150,
+  },
+  {
+    x: 60,
+    y: 150,
+  },
+  {
+    x: 80,
+    y: 138,
+  },
+];
 
 const FeverCard = ({ feverFahrenheit }: Props) => {
   return (
@@ -18,7 +40,49 @@ const FeverCard = ({ feverFahrenheit }: Props) => {
           <span className="text-md">°F</span>
         </div>
 
-        <div>graph area</div>
+        <div>
+          <Line
+            data={{
+              datasets: [
+                {
+                  data: feverCardData,
+                  borderColor: "purple",
+                  borderWidth: 2,
+                  fill: false,
+                  pointBackgroundColor: "purple",
+                },
+              ],
+            }}
+            options={{
+              scales: {
+                x: {
+                  type: "linear",
+                  title: {
+                    display: true,
+                    color: "purple",
+                  },
+                  ticks: {
+                    color: "purple",
+                  },
+                },
+                y: {
+                  title: {
+                    display: true,
+                    color: "purple",
+                  },
+                  ticks: {
+                    color: "purple", // 👈 Y-axis labels color
+                  },
+                },
+              },
+              plugins: {
+                legend: {
+                  display: false,
+                },
+              },
+            }}
+          />
+        </div>
       </div>
     </>
   );

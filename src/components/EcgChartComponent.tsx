@@ -30,7 +30,6 @@ const EcgChartComponent = ({ averageBpm }: Props) => {
         <Line
           datasetIdKey="id"
           data={{
-            labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
             datasets: [
               {
                 label: "ECG signal",
