@@ -63,7 +63,7 @@ const Patient = ({ patientName }: Props) => {
           <EcgChartComponent averageBpm={AVERAGE_BPM} />
         </div>
 
-        <div className="grid grid-cols-4 gap-2">
+        <div className="grid grid-cols-4 gap-2 p-4">
           <BloodPressureBottomCard
             upperBloodPressure={UPPER_BLOOD_PRESSURE_BOTTOM}
             lowerBloodPressure={LOWER_BLOOD_PRESSURE_BOTTOM}
